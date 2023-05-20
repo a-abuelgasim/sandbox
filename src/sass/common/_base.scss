@@ -1,0 +1,41 @@
+// General styles
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	// stylelint-disable value-keyword-case
+	text-rendering: optimizeLegibility;
+	// stylelint-enable value-keyword-case
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+// Screen reader only
+.u-sr-only {
+	height: 1px;
+	left: -10000px;
+	overflow: hidden;
+	position: absolute;
+	top: auto;
+	width: 1px;
+}
