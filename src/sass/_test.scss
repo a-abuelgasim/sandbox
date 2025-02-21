@@ -54,8 +54,9 @@ body {
 // FROM HERE
 
 body {
-	background-color: #fafbfd;
+	background-color: var(--color-primary-dark);
 	font-family: Assistant, sans-serif;
+	text-align: justify;
 }
 
 main {
@@ -63,32 +64,20 @@ main {
 	padding-top: 60px;
 }
 
-.paper {
-	background: white;
-	display: grid;
-	font-size: 11pt;
-	grid-template-areas: 'left right';
-	grid-template-columns: 5.95in auto;
-	height: 279.4mm;
-	margin: 0 auto;
-	outline: 1px solid #c7c7c7;
-	width: 215.9mm;
+a {
+	color: inherit;
 
-	&__left {
-		grid-area: left;
-		padding: .25in 5px .25in .25in;
+	&:focus {
+		outline: 2px solid var(--color-interactive);
 	}
 
-	&__right {
-		background-color: var(--color-bg-2);
-		font-size: 10pt;
-		grid-area: right;
-		height: 100%;
-		padding: .25in .15in .25in .125in;
+	&:not(:hover) {
+		text-decoration: none;
+	}
 
-		img {
-
-		}
+	&:focus,
+	&:hover {
+		color: var(--color-interactive);
 	}
 }
 
@@ -108,15 +97,16 @@ main {
 	color: var(--color-primary);
 }
 
+.h3,
+.h5 {
+	color: var(--color-primary-dark);
+}
+
 .subtitle,
 .h2 {
 	font-size: 13pt;
 }
 
-.h3,
-.h5 {
-	color: var(--color-primary-dark);
-}
 
 .title {
 	font-size: 16pt;
@@ -132,44 +122,47 @@ main {
 
 .h4 {
 	font-size: 12pt;
+	margin-top: 10pt;
 }
 
 .h5 {
 	font-size: 10pt;
+	margin-bottom: 2pt;
 }
 
+// ////////////////////////
 
-$ul-indent: 12px;
+$page-padding: .25in;
 
-.ul {
-	margin: 4pt 0 6pt;
-	padding-left: $ul-indent;
-}
+.paper {
+	background: white;
+	display: grid;
+	font-size: 11pt;
+	grid-template-areas: 'left right';
+	grid-template-columns: 6in auto;
+	height: 11in;
+	margin: 0 auto;
+	width: 8.5in;
 
-.li {
-	position: relative;
+	&__left {
+		grid-area: left;
+		padding: $page-padding 5pt $page-padding $page-padding;
+	}
 
-	&:before {
-		aspect-ratio: 1 / 1;
-		background: var(--color-primary);
-		border-radius: 50%;
-		content: '';
-		left: calc(-1 * $ul-indent);
-		position: absolute;
-		top: .4em;
-		width: .45em;
+	&__right {
+		background-color: var(--color-bg-2);
+		font-size: 10pt;
+		grid-area: right;
+		height: 100%;
+		padding: $page-padding .15in $page-padding .125in;
 	}
 }
 
 
 .title-container {
-	gap: 6px;
+	align-items: baseline;
+	display: flex;
 	margin-bottom: 2pt;
-}
-
-.separator {
-	color: var(--color-secondary);
-	font-weight: 700;
 }
 
 .icon {
@@ -183,25 +176,44 @@ $ul-indent: 12px;
 
 .link {
 	color: var(--color-interactive);
-	text-decoration: none;
+}
 
-	&:hover {
-		color: var(--color-interacting);
+.separator {
+	background-color: var(--color-secondary);
+	height: 1em;
+	margin: 0 6pt;
+	width: 2pt;
+}
+
+.list {
+	$list-indent: .13in;
+
+	margin: 4pt 0 6pt;
+	padding-left: $list-indent;
+
+	&__item {
+		position: relative;
+
+		&::before {
+			aspect-ratio: 1 / 1;
+			background: var(--color-primary);
+			border-radius: 50%;
+			content: '';
+			left: calc(-1 * $list-indent);
+			position: absolute;
+			top: .4em;
+			width: .45em;
+		}
 	}
 }
 
-$indent: 8px;
+$indent: 6pt;
 
 .u-inline-flex {
 	align-items: center;
 	display: flex;
 	gap: $indent;
 }
-
-.u-justify {
-	text-align: justify;
-}
-
 
 .experience {
 	align-items: center;
@@ -217,6 +229,7 @@ $indent: 8px;
 
 	&__role,
 	&__dates {
+		align-items: center;
 		display: flex;
 	}
 
@@ -225,16 +238,103 @@ $indent: 8px;
 	}
 }
 
-.sidebar-item {
-	display: flex;
-	gap: $indent;
-
-	&:not(:last-of-type) {
-		margin-bottom: 2px;
+.sidebar {
+	&-list {
+		margin-bottom: 6pt;
 	}
 
-	&__link {
-		text-decoration: none;
-		color: inherit;
+	&-item {
+		$block: &;
+
+		display: flex;
+		gap: $indent;
+
+		.h5 {
+			margin: 0;
+		}
+
+		&:not(:last-of-type) {
+			margin-bottom: 2pt;
+		}
+
+		&--align-start {
+			align-items: flex-start;
+
+			&:last-of-type {
+				margin-top: 5pt;
+			}
+
+			.icon {
+				position: relative;
+				top: 2pt;
+			}
+		}
 	}
+}
+
+.dialog {
+	border: none;
+	border-radius: 8px;
+	inset: 50% auto auto 50%;
+	max-width: 400px;
+	padding: 20px;
+	transform: translate(-50%, -50%);
+	// position: fixed;
+
+	&__header {
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 10px;
+	}
+
+	&-close-btn {
+		background: none;
+		border: none;
+		color: var(--color-text);
+		cursor: pointer;
+		font-size: 20px;
+		margin-left: auto;
+	}
+
+
+	&-show-btn {
+		&-container {
+			position: relative;
+		}
+
+		aspect-ratio: 1 / 1;
+		background: var(--dialog-show-btn-bg-color, var(--color-interactive));
+		border: 0;
+		border-radius: 50%;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 30%), 0 1px 3px 1px rgba(0, 0, 0, 15%);
+		cursor: pointer;
+		left: -$page-padding + 4px;
+		position: absolute;
+		top: 2px;
+		transition: .2s background-color, .2s width;
+		width: var(--dialog-show-btn-width, 15px);
+
+		&:focus-visible,
+		&:hover {
+			--dialog-show-btn-bg-color: var(--color-interacting);
+			--dialog-show-btn-width: 17px;
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		@media print {
+ 			display: none;
+		}
+	}
+
+	&-show-btn:hover + [dialog-subject-for],
+	&-open {
+		background-color: var(--color-tertiary);
+	}
+}
+
+[dialog-subject-for] {
+	transition: .2s background-color;
 }

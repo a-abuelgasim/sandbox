@@ -1,355 +1,687 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&amp;family=Just+Another+Hand&amp;display=swap" rel="stylesheet">
-    <title>Sandbox</title>
-  </head>
 
-  <body>
-    <main>
-      <div class="paper">
-        <div class="paper__left">
-          <div class="title-container u-inline-flex">
-            <h1 class="title">
-              Ahmed Abuelgasim
-            </h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&amp;family=Just+Another+Hand&amp;display=swap"
+    rel="stylesheet">
+  <title>Sandbox</title>
+</head>
 
-            <div class="separator"></div>
+<body>
+  <main>
+    <div class="paper">
+      <div class="paper__left">
+        <div class="title-container">
+          <h1 class="title">
+            Ahmed Abuelgasim
+          </h1>
 
-            <div class="subtitle">
-              Senior Software Engineer
-            </div>
+          <div class="separator"></div>
+
+          <div class="subtitle">
+            Senior Software Engineer
           </div>
+        </div>
 
-          <p class="u-justify">
+        <div class="dialog-show-btn-container">
+          <button
+              aria-label="Read more about me"
+              class="dialog-show-btn"
+              dialog-show-btn-for="profile-dialog">
+          </button>
+
+          <p dialog-subject-for="profile-dialog">
             Insightful engineer with almost nine years of experience crafting quality, performant and accessible digital products. Tackled numerous complex challenges across a wide range of projects, mainly for Google. Attained extensive front-end expertise, mainly using React and Angular, and ample back-end experience using Python, Django and PHP. Exhibits high attention to detail, exceptional problem-solving abilities, strong communication skills, collaborative teamwork and mentoring capabilities, and a commitment to innovation.
           </p>
+        </div>
 
-          <h2 class="h2">
-            Notable achievements
-          </h2>
 
-          <h3 class="h3 u-inline-flex">
+        <h2 class="h2">
+          Notable achievements
+        </h2>
+
+        <h3 class="h3 u-inline-flex">
+          <img
+              class="icon"
+              role="presentation"
+              src="/icons/a11y.svg">
+
+          Accessible Custom Elements (ACE) library
+        </h3>
+
+        <ul class="list">
+          <li class="list__item">
+            Created ACE (<a class="link" href="https://ace.p.ota.to" target="_blank">ace.p.ota.to</a>), an open-source library of customisable UI components, accessible to users who rely on assistive technology or keyboard navigation.
+          </li>
+
+          <li class="list__item">
+            Led project from concept to completion, publication on npm and use in Potato’s website (<a class="link" href="https://p.ota.to" target="_blank">p.ota.to</a>) and many Google digital products, and currently maintain the library.
+          </li>
+
+          <li class="list__item">
+            Used Node.js and CI/CD to automatically update documentation web pages with latest code and component demos for users to interact with while examining the code.
+          </li>
+        </ul>
+
+        <h3 class="h3 u-inline-flex">
+          <img
+              class="icon"
+              role="presentation"
+              src="/icons/teaching.svg">
+
+          Knowledge sharing
+        </h3>
+
+        <ul class="list">
+          <li class="list__item">
+            Wrote 6 articles for ‘Web designer’ and ‘net’ magazines, and accessibility blog posts.
+          </li>
+          <li class="list__item">
+            Delivered accessibility-related tutorials and CSS Grid Layout Module workshops.
+          </li>
+        </ul>
+
+        <h2 class="h2">
+          Work experience
+        </h2>
+
+        <div class="experience">
+          <a
+              aria-hidden="true"
+              class="experience__icon"
+              href="https://www.workiva.com/">
             <img
-                class="icon"
                 role="presentation"
-                src="/icons/a11y.svg">
+                src="/icons/workiva.svg">
+          </a>
 
-            <span>
-              Accessible Custom Elements (ACE) library
-            </span>
-          </h3>
+          <div class="experience__text">
+            <div class="experience__role">
+              <h3 class="h3">
+                Senior Software Engineer
+              </h3>
 
-          <ul class="ul">
-            <li class="li">
-              Created ACE (<a class="link" href="https://ace.p.ota.to" target="_blank">ace.p.ota.to</a>), an open-source library of customisable UI components, accessible to users who rely on assistive technology or keyboard navigation.
-            </li>
+              <div class="separator"></div>
 
-            <li class="li">
-              Led project from concept to completion, publication on npm and use in Potato’s website (<a class="link" href="https://p.ota.to" target="_blank">p.ota.to</a>) and many Google digital products, and currently maintain the library.
-            </li>
-
-            <li class="li">
-              Used Node.js and CI/CD to automatically update documentation web pages with latest code and component demos for users to interact with while examining the code.
-            </li>
-          </ul>
-
-          <h3 class="h3 u-inline-flex">
-            <img
-                class="icon"
-                role="presentation"
-                src="/icons/teaching.svg">
-
-            <span>
-              Knowledge sharing
-            </span>
-          </h3>
-
-          <ul class="ul">
-            <li class="li">
-              Wrote 6 articles for ‘Web designer’ and ‘net’ magazines, and accessibility blog posts.
-            </li>
-            <li class="li">
-              Delivered accessibility-related tutorials and CSS Grid Layout Module workshops.
-            </li>
-          </ul>
-
-          <h2 class="h2">
-            Work experience
-          </h2>
-
-          <div class="experience">
-            <div class="experience__icon">
-              <img
-                  role="presentation"
-                  src="/icons/workiva.svg">
+              <a
+                  class="h3"
+                  href="https://www.workiva.com/">
+                Workiva
+              </a>
             </div>
 
-            <div class="experience__text">
-              <div class="experience__role">
-                <h3 class="h3">
-                  Senior Software Engineer
-                </h3>
-
-                <div
-                    aria-hidden="true"
-                    class="separator">
-                  ｜
-                </div>
-
-                <div class="h3">
-                  Workiva
-                </div>
+            <div class="experience__dates">
+              <div>
+                Oct 2023 - Present
               </div>
 
-              <div class="experience__dates">
-                <div>
-                  Oct 2023 - Present
-                </div>
+              <div class="separator"></div>
 
-                <div
-                    aria-hidden="true"
-                    class="separator">
-                  ｜
-                </div>
-
-                <div>
-                  Remote
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <ul class="ul">
-            <li class="li">
-              Currently transitioning Workiva user dashboard Dart components to a microfrontend architecture, rewriting them in React and TypeScript, implementing new design system styling, increasing test coverage and adding end-to-end tests.
-            </li>
-
-            <li class="li">
-              Developed React component library, customisable via JSON configurations and aligned with Workiva UI standards allowing builders to tailor Workiva solutions for end users.
-            </li>
-
-            <li class="li">
-              Created Node.js and TypeScript template system to generate JSON schema and Dart boilerplate for new components, wrote component tests using React Testing Library, and implemented localisation features and accessibility best practices.
-            </li>
-          </ul>
-
-          <div class="experience">
-            <div class="experience__icon">
-              <img
-                  role="presentation"
-                  src="/icons/potato.svg">
-            </div>
-
-            <div class="experience__text">
-              <div class="experience__role">
-                <h3 class="h3">
-                  Senior Software Engineer
-                </h3>
-
-                <div
-                    aria-hidden="true"
-                    class="separator">
-                  ｜
-                </div>
-
-                <div class="h3">
-                  Potato
-                </div>
-              </div>
-
-              <div class="experience__dates">
-                <div>
-                  Oct 2017 - Mar 2023
-                </div>
-
-                <div
-                    aria-hidden="true"
-                    class="separator">
-                  ｜
-                </div>
-
-                <div>
-                  London, UK & Remote
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <ul class="ul">
-            <li class="li">
-              Architected and led front-end development of Angular app for Google, enabling clients to assess digital marketing maturity, allowing the Sales team to curate their services.
-            </li>
-
-            <li class="li">
-              Developed AngularDart app for client in Area120, Google's incubator, with complex storefront and admin dashboard, used by content creators to sell digital products.
-            </li>
-
-            <li class="li">
-              Investigated replacing AngularJS for two major projects before its deprecation. Wrote specification documents comparing potential replacements and led refactoring efforts.
-            </li>
-
-            <li class="li">
-              As part of the Quality Guild, created GitLab CI/CD pipeline templates that automate Google Cloud or Firebase deployment and Lighthouse runs, minimising regressions.
-            </li>
-
-            <li class="li">
-              As part of the Accessibility Guild, conducted accessibility audits of multiple projects and implemented improvements to achieve perfect Lighthouse scores.
-            </li>
-          </ul>
-
-
-          <div class="experience">
-            <div class="experience__icon">
-              <img
-                  role="presentation"
-                  src="/icons/freelance.svg">
-            </div>
-
-            <div class="experience__text">
-              <div class="experience__role">
-                <h3 class="h3">
-                  Software Engineer
-                </h3>
-
-                <div
-                    aria-hidden="true"
-                    class="separator">
-                  ｜
-                </div>
-
-                <div class="h3">
-                  Freelance
-                </div>
-              </div>
-
-              <div class="experience__dates">
-                <div>
-                  Apr 2016 - Oct 2017
-                </div>
-
-                <div
-                    aria-hidden="true"
-                    class="separator">
-                  ｜
-                </div>
-
-                <div>
-                  Remote
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="experience">
-            <div class="experience__icon">
-              <img
-                  role="presentation"
-                  src="/icons/microchip.svg">
-            </div>
-
-            <div class="experience__text">
-              <div class="experience__role">
-                <h3 class="h3">
-                  Cleanroom Process Engineer
-                </h3>
-
-                <div
-                    aria-hidden="true"
-                    class="separator">
-                  ｜
-                </div>
-
-                <div class="h3">
-                  Southampton Nanofabrication Center
-                </div>
-              </div>
-
-              <div class="experience__dates">
-                <div>
-                  Nov 2012 - Nov 2016
-                </div>
-
-                <div
-                    aria-hidden="true"
-                    class="separator">
-                  ｜
-                </div>
-
-                <div>
-                  Southampton, UK
-                </div>
+              <div>
+                Remote
               </div>
             </div>
           </div>
         </div>
 
-        <div class="paper__right">
-          <div class="sidebar-item">
-            <img
-                class="icon icon--sm"
-                role="presentation"
-                src="/icons/email.svg">
+        <ul class="list">
+          <li class="list__item">
+            Currently transitioning Workiva user dashboard Dart components to a microfrontend architecture, rewriting them in React and TypeScript, implementing new design system styling, increasing test coverage and adding end-to-end tests.
+          </li>
 
-            <a
-                class="sidebar-item__link"
-                href="mailto:a.abuelgasim2023@gmail.com">
-              a.abuelgasim2023@gmail.com
-            </a>
+          <li class="list__item">
+            Developed React component library, customisable via JSON configurations and aligned with Workiva UI standards allowing builders to tailor Workiva solutions for end users.
+          </li>
+
+          <li class="list__item">
+            Created Node.js and TypeScript template system to generate JSON schema and Dart boilerplate for new components, wrote component tests using React Testing Library, and implemented localisation features and accessibility best practices.
+          </li>
+        </ul>
+
+        <div class="experience">
+          <a
+              aria-hidden="true"
+              class="experience__icon"
+              href="https://p.otato">
+            <img
+                role="presentation"
+                src="/icons/potato.svg">
+          </a>
+
+          <div class="experience__text">
+            <div class="experience__role">
+              <h3 class="h3">
+                Senior Software Engineer
+              </h3>
+
+              <div class="separator"></div>
+
+              <a
+                  class="h3"
+                  href="https://p.otato">
+                Potato
+              </a>
+            </div>
+
+            <div class="experience__dates">
+              <div>
+                Oct 2017 - Mar 2023
+              </div>
+
+              <div class="separator"></div>
+
+              <div>
+                London, UK & Remote
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ul class="list">
+          <li class="list__item">
+            Architected and led front-end development of Angular app for Google, enabling clients to assess digital marketing maturity, allowing the Sales team to curate their services.
+          </li>
+
+          <li class="list__item">
+            Developed AngularDart app for client in Area120, Google's incubator, with complex storefront and admin dashboard, used by content creators to sell digital products.
+          </li>
+
+          <li class="list__item">
+            Investigated replacing AngularJS for two major projects before its deprecation. Wrote specification documents comparing potential replacements and led refactoring efforts.
+          </li>
+
+          <li class="list__item">
+            As part of the Quality Guild, created GitLab CI/CD pipeline templates that automate Google Cloud or Firebase deployment and Lighthouse runs, minimising regressions.
+          </li>
+
+          <li class="list__item">
+            As part of the Accessibility Guild, conducted accessibility audits of multiple projects and implemented improvements to achieve perfect Lighthouse scores.
+          </li>
+        </ul>
+
+        <div class="experience">
+          <div class="experience__icon">
+            <img
+                role="presentation"
+                src="/icons/freelance.svg">
           </div>
 
-          <div class="sidebar-item">
-            <img
-                class="icon icon--sm"
-                role="presentation"
-                src="/icons/website.svg">
+          <div class="experience__text">
+            <div class="experience__role">
+              <h3 class="h3">
+                Software Engineer
+              </h3>
 
-            <a
-                class="sidebar-item__link"
-                href="https://a-abuelgasim.github.io/portfolio"
-                target="_blank">
-              a-abuelgasim.github.io/portfolio
-            </a>
+              <div class="separator"></div>
+
+              <div class="h3">
+                Freelance
+              </div>
+            </div>
+
+            <div class="experience__dates">
+              <div>
+                Apr 2016 - Oct 2017
+              </div>
+
+              <div class="separator"></div>
+
+              <div>
+                Remote
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div class="sidebar-item">
+        <div class="experience">
+          <a
+              aria-hidden="true"
+              class="experience__icon"
+              href="https://www.southampton-nanofab.com/">
             <img
-                class="icon icon--sm"
                 role="presentation"
-                src="/icons/github.svg">
+                src="/icons/microchip.svg">
+          </a>
 
-            <a
-                class="sidebar-item__link"
-                href="https://github.com/a-abuelgasim"
-                target="_blank">
-              github.com/a-abuelgasim
-            </a>
+          <div class="experience__text">
+            <div class="experience__role">
+              <h3 class="h3">
+                Cleanroom Process Engineer
+              </h3>
+
+              <div class="separator"></div>
+
+              <a
+                  class="h3"
+                  href="https://www.southampton-nanofab.com/">
+                Southampton Nanofabrication Center
+              </a>
+            </div>
+
+            <div class="experience__dates">
+              <div>
+                Nov 2012 - Nov 2016
+              </div>
+
+              <div class="separator"></div>
+
+              <div>
+                Southampton, UK
+              </div>
+            </div>
           </div>
-
-          <div class="sidebar-item">
-            <img
-                class="icon icon--sm"
-                role="presentation"
-                src="/icons/linked-in.svg">
-
-            <a
-                class="sidebar-item__link"
-                href="https://linkedin.com/in/a-abuelgasim"
-                target="_blank">
-              linkedin.com/in/a-abuelgasim
-            </a>
-          </div>
-
-
         </div>
       </div>
-    </main>
+
+      <div class="paper__right">
+        <h2 class="u-sr-only">
+          Contact details
+        </h2>
+
+        <div class="sidebar-item">
+          <img
+              class="icon icon--sm"
+              role="presentation"
+              src="/icons/email.svg">
+
+          <a
+              aria-label="Email"
+              href="mailto:a.abuelgasim2023@gmail.com">
+            a.abuelgasim2023@gmail.com
+          </a>
+        </div>
+
+        <div class="sidebar-item">
+          <img
+              class="icon icon--sm"
+              role="presentation"
+              src="/icons/website.svg">
+
+          <a
+              aria-label="Portfolio website"
+              href="https://a-abuelgasim.github.io/portfolio"
+              target="_blank">
+            a-abuelgasim.github.io/portfolio
+          </a>
+        </div>
+
+        <div class="sidebar-item">
+          <img
+              class="icon icon--sm"
+              role="presentation"
+              src="/icons/github.svg">
+
+          <a
+              aria-label="Github"
+              href="https://github.com/a-abuelgasim"
+              target="_blank">
+            github.com/a-abuelgasim
+          </a>
+        </div>
+
+        <div class="sidebar-item">
+          <img
+              class="icon icon--sm"
+              role="presentation"
+              src="/icons/linked-in.svg">
+
+          <a
+              aria-label="LinkedIn"
+              href="https://linkedin.com/in/a-abuelgasim"
+              target="_blank">
+            linkedin.com/in/a-abuelgasim
+          </a>
+        </div>
+
+        <h2 class="h4">
+          Education
+        </h2>
+
+        <div class="sidebar-item sidebar-item--align-start">
+          <img
+              class="icon icon--sm"
+              role="presentation"
+              src="/icons/uos.svg">
+
+          <div>
+            <h3 class="h5">
+              PhD, Electronic Engineering
+            </h3>
+
+            <div>
+              Nov 2008 - Jul 2013
+            </div>
+
+            <div>
+              University of Southampton, UK
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-item sidebar-item--align-start">
+          <img
+              class="icon icon--sm"
+              role="presentation"
+              src="/icons/uos.svg">
+
+          <div>
+            <h3 class="h5">
+              Masters, Electronic Engineering
+            </h3>
+
+            <div>
+              First Class (Honours)
+            </div>
+
+            <div>
+              Oct 2003 - Jun 2007
+            </div>
+
+            <div>
+              University of Southampton, UK
+            </div>
+          </div>
+        </div>
+
+        <h2 class="h4">
+          Skills
+        </h2>
+
+        <h3 class="h5">
+          Frameworks & Libraries
+        </h3>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/react.svg">
+
+            React
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/angular.svg">
+
+            Angular
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/angulardart.svg">
+
+            AngularDart
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/vue.svg">
+
+            Vue
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/rxjs.svg">
+
+            RxJS
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/django.svg">
+
+            Django
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/sass.svg">
+
+            Sass
+          </li>
+        </ul>
+
+        <h3 class="h5">
+          Languages
+        </h3>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/javascript.svg">
+
+            JavaScript
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/typescript.svg">
+
+            TypeScript
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/dart.svg">
+
+            Dart
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/python.svg">
+
+            Python
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/css.svg">
+
+            CSS
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/html.svg">
+
+            HTML
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/bash.svg">
+
+            Bash
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/php.svg">
+
+            PHP
+          </li>
+        </ul>
+
+        <h3 class="h5">
+          Testing & QA
+        </h3>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/cypress.svg">
+
+            Cypress
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/jest.svg">
+
+            Jest
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/rtl.svg">
+
+            React Testing Library
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/jasmine.svg">
+
+            Jasmine
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/vitest.svg">
+
+            Vitest
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/github-actions.svg">
+
+            GitHub Actions
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/gitlab-color.svg">
+
+            Gitlab CI/CD
+          </li>
+        </ul>
+
+        <h3 class="h5">
+          Other
+        </h3>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/nodejs.svg">
+
+            Node.js
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/google-cloud.svg">
+
+            Google Cloud
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/firebase.svg">
+
+            Firebase
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/json-schema.svg">
+
+            JSON Schema
+          </li>
+
+          <li class="sidebar-item">
+            <img
+                class="icon icon--sm"
+                role="presentation"
+                src="/icons/figma.svg">
+
+            Figma
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
 
 
-    <script type="module" src="/src/ts/main.ts"></script>
-  </body>
+  <dialog
+      class="dialog"
+      dialog="profile-dialog">
+    <div class="dialog__header">
+      <button
+          class="dialog-close-btn"
+          dialog-close-btn-for="profile-dialog">
+        x
+      </button>
+    </div>
+
+    <h2>About me</h2>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+  </dialog>
+
+  <script type="module" src="/src/ts/main.ts"></script>
+</body>
+
 </html>
